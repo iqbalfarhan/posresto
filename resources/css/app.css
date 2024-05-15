@@ -1,0 +1,50 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    html {
+        font-family: "Montserrat Alternates", sans-serif;
+        @apply font-semibold scrollbar-hide;
+    }
+    thead {
+        @apply border-b-4 border-base-300 bg-base-200/50;
+    }
+}
+@layer components {
+    .textarea-bordered,
+    .file-input-bordered,
+    .select-bordered,
+    .input-bordered {
+        @apply border-2 border-base-300;
+    }
+
+    .textarea-error,
+    .file-input-error,
+    .select-error,
+    .input-error {
+        @apply border-2 border-error;
+    }
+
+    .card {
+        @apply bg-base-100 border-2 border-base-300;
+    }
+
+    .page-wrapper {
+        @apply container w-full max-w-6xl p-6 mx-auto space-y-6;
+    }
+
+    .table-wrapper {
+        @apply bg-base-100 border-2 border-base-300 overflow-x-auto rounded-lg whitespace-nowrap;
+    }
+
+    .modal-box {
+        @apply scrollbar-hide;
+    }
+
+    .card-divider {
+        @apply divide-y-2 divide-base-300;
+    }
+}
