@@ -1,9 +1,9 @@
 <div class="page-wrapper">
     <div class="flex flex-col md:flex-row justify-between gap-2">
         <input type="date" class="input input-bordered" wire:model.live="date">
-        <a href="{{ route('transaksi.create') }}" class="btn btn-primary">
-            <x-tabler-plus class="size-5" />
-            <span>Tambah transaksi</span>
+        <a href="{{ route('transaksi.export') }}" class="btn btn-primary" wire:navigate>
+            <x-tabler-upload class="size-5" />
+            <span>Export transaksi</span>
         </a>
     </div>
     <div class="table-wrapper">

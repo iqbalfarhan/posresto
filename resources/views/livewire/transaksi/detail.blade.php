@@ -36,8 +36,15 @@
                     </table>
                 </div>
             </div>
-            <div class="modal-action">
+            <div class="modal-action justify-between">
                 <button type="button" wire:click="closeModal" class="btn btn-ghost">Close</button>
+                @isset($transaksi)
+                    <a href="{{ route('transaksi.cetak', $transaksi) }}"
+                        onclick="return cetakStruk('{{ route('transaksi.cetak', $transaksi) }}');" class="btn btn-primary">
+                        <x-tabler-printer class="size-5" />
+                        <span>Cetak struk</span>
+                    </a>
+                @endisset
             </div>
         </div>
     </div>
