@@ -2,10 +2,14 @@
 
 namespace App\Models;
 
+use App\Observers\MenuObserver;
+use Illuminate\Database\Eloquent\Attributes\ObservedBy;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Number;
+
+#[ObservedBy([MenuObserver::class])]
 
 class Menu extends Model
 {
